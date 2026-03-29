@@ -1,6 +1,7 @@
 import argparse
 import os
 import sys
+import json
 
 from openai import OpenAI
 
@@ -48,11 +49,13 @@ def main():
 
     for tool_call in chat.choices[0].message.tool_calls:
         if tool_call.type == "function" and tool_call.function.name == "Read":
-            file_path = tool_call.function.arguments["file_path"]
+
+            args = json.loads(tool_call.function.arguments)
+            file_path = args["file_path"]
             with open(file_path, "r") as f:
-                file_contents = f.read()
-            tool_call.function.response = file_contents
-            print(tool_call.function.response)
+                print(f.read())
+           # tool_call.function.response = file_contents
+           # print(tool_call.function.response)
     # TODO: Uncomment the following line to pass the first stage
     print(chat.choices[0].message.content)
 
