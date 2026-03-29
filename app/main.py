@@ -46,8 +46,15 @@ def main():
     # You can use print statements as follows for debugging, they'll be visible when running tests.
     print("Logs from your program will appear here!", file=sys.stderr)
 
+    for tool_call in chat.choices[0].message.tool_calls:
+        if tool_call.type == "function" and tool_call.function_call.name == "Read":
+            file_path = tool_call.function_call.arguments["file_path"]
+            with open(file_path, "r") as f:
+                print(f.read())
+            #tool_call.function_call.response = file_contents
     # TODO: Uncomment the following line to pass the first stage
-    print(chat.choices[0].message.content)
+    if chat.choices[0].message.content:
+        print(chat.choices[0].message.content)
 
 
 if __name__ == "__main__":
