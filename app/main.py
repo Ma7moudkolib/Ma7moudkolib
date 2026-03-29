@@ -55,7 +55,7 @@ def main():
             with open(file_path, "r") as f:
                 print(f.read(),end="")
     # TODO: Uncomment the following line to pass the first stage
-    if len(chat.choices[0].message.tool_calls) == 0:
+    if len(chat.choices[0].message.tool_calls or []) == 0:
         print(chat.choices[0].message.content)
    # print(chat.choices[0].message.content)
 
