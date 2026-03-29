@@ -48,13 +48,13 @@ def main():
 
     for tool_call in chat.choices[0].message.tool_calls:
         if tool_call.type == "function" and tool_call.function.name == "Read":
-            file_path = tool_call.function.parameters["file_path"]
+            file_path = tool_call.function.arguments["file_path"]
             with open(file_path, "r") as f:
-                print(f.read())
-            #tool_call.function_call.response = file_contents
+                file_contents = f.read()
+            tool_call.function.response = file_contents
+            print(tool_call.function.response)
     # TODO: Uncomment the following line to pass the first stage
-    if chat.choices[0].message.content:
-        print(chat.choices[0].message.content)
+    print(chat.choices[0].message.content)
 
 
 if __name__ == "__main__":
