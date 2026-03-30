@@ -62,7 +62,7 @@ def main():
             raise RuntimeError("no choices in response")
 
         # You can use print statements as follows for debugging, they'll be visible when running tests.
-        print("Logs from your program will appear here!", file=sys.stderr)
+       # print("Logs from your program will appear here!", file=sys.stderr)
 
         for tool_call in chat.choices[0].message.tool_calls or []:
             if tool_call.type == "function" and tool_call.function.name == "Read":
@@ -71,7 +71,7 @@ def main():
                 file_path = args["file_path"]
                 with open(file_path, "r") as f:
                     messages.append({
-                        "id": tool_call.id,
+                        "tool_call_id": tool_call.id,
                         "role": "tool",
                         "content": f.read()
                     })
