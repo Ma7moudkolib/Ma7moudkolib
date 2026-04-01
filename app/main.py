@@ -124,6 +124,8 @@ def main():
             if tool_call.type == "function" and tool_call.function.name == "Bash":
                 command = args["command"]
                 output = subprocess.check_output(command, shell=True, text=True)
+                result = subprocess.run(command, shell=True, capture_output=True, text=True)
+                output = result.stdout + "\n" + result.stderr
                 messages.append({
                     "tool_call_id": tool_call.id,
                     "role": "tool",
