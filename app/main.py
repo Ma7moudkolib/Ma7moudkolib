@@ -104,8 +104,9 @@ def main():
 
         for tool_call in chat.choices[0].message.tool_calls or []:
             args = json.loads(tool_call.function.arguments)
-            file_path = args["file_path"]
+            
             if tool_call.type == "function" and tool_call.function.name == "Read":
+                file_path = args["file_path"]
                 with open(file_path, "r") as f:
                     messages.append({
                         "tool_call_id": tool_call.id,
@@ -113,6 +114,7 @@ def main():
                         "content": f.read()
                     })
             if tool_call.type == "function" and tool_call.function.name == "Write":
+                file_path = args["file_path"]
                 content = args["content"]
                 with open(file_path, "w") as f:
                     f.write(content)
