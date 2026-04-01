@@ -60,7 +60,24 @@ def main():
                     }
                     }
                 }
-            }]
+            },
+            {
+                "type": "function",
+                "function": {
+                    "name": "Bash",
+                    "description": "Execute a shell command",
+                    "parameters": {
+                    "type": "object",
+                    "required": ["command"],
+                    "properties": {
+                        "command": {
+                        "type": "string",
+                        "description": "The command to execute"
+                        }
+                    }
+                    }
+                }
+                }]
         )
         response_message = chat.choices[0].message
         response = chat.choices[0].message
@@ -103,6 +120,15 @@ def main():
                     "tool_call_id": tool_call.id,
                     "role": "tool",
                     "content": f"Wrote to {file_path}"
+                })
+            if tool_call.type == "function" and tool_call.function.name == "Bash":
+                command = args["command"]
+                stream = os.popen(command)
+                output = stream.read()
+                messages.append({
+                    "tool_call_id": tool_call.id,
+                    "role": "tool",
+                    "content": output
                 })
         # TODO: Uncomment the following line to pass the first stage
        # if len(chat.choices[0].message.tool_calls or []) == 0:
