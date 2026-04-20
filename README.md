@@ -90,7 +90,7 @@ class WhoAmI:
 - 🔭 Currently working on **scalable enterprise backend systems**
 - 🌱 Learning **advanced system design and distributed computing**
 - 💬 Ask me about **Architecture, .NET, or system design**
-- 📄 [My Resume]([https://drive.google.com/file/d/1tFL1gHFPw3MXzfW98oQEFjs2jQSGiVjw/view?usp=share](https://drive.google.com/file/d/1fe2Wh9dSbp-YB5ZRZSEbSA3vovoQMs3H/view?usp=sharing)
+- 📄 [My Resume](https://drive.google.com/file/d/1fe2Wh9dSbp-YB5ZRZSEbSA3vovoQMs3H/view?usp=sharing)
 
 ---
 
