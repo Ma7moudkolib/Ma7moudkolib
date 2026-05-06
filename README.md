@@ -1,6 +1,6 @@
 ## Hey there! I'm Mahmoud Kolib <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28px" height="28px">
 
-<h2>Software Engineer · Web Developer · Cybersecurity Enthusiast 🔐</h2>
+<h2>Software Engineer · Web Developer 🔐</h2>
 
 [![LinkedIn Badge](https://img.shields.io/badge/-mahmoud--kolib-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/Mahmoud-kolib)](https://www.linkedin.com/in/Mahmoud-kolib)
 [![Gmail Badge](https://img.shields.io/badge/-Mahmoud.kolib22@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:Mahmoud.kolib22@gmail.com)](mailto:Mahmoud.kolib22@gmail.com)
@@ -14,10 +14,9 @@
 
 ## 💻 What I'm About
 
-- 🔐 Breaking into **Cybersecurity** — CTFs, pentesting & secure systems
+- 🧠 Writing clean, scalable code as a **Software Engineer**
 - 🌐 Building robust **Web Applications** (frontend & backend)
 - ⚙️ Automating everything with **DevOps** practices
-- 🧠 Writing clean, scalable code as a **Software Engineer**
 
 ---
 
@@ -38,7 +37,6 @@
 
 ![ASP.NET Core](https://img.shields.io/badge/-ASP.NET%20Core-512BD4?style=flat-square&logo=.net&logoColor=white)
 ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Django](https://img.shields.io/badge/-Django-092E20?style=flat-square&logo=django&logoColor=white)
 
 **DevOps & Infrastructure**
 
@@ -47,11 +45,6 @@
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
 
-**Cybersecurity**
-
-![Kali Linux](https://img.shields.io/badge/-Kali%20Linux-557C94?style=flat-square&logo=kali-linux&logoColor=white)
-![Wireshark](https://img.shields.io/badge/-Wireshark-1679A7?style=flat-square&logo=wireshark&logoColor=white)
-![Burp Suite](https://img.shields.io/badge/-Burp%20Suite-FF6633?style=flat-square&logo=burp-suite&logoColor=white)
 
 **Testing & Quality**
 
@@ -66,11 +59,10 @@
 class WhoAmI:
     name        = "Mahmoud Kolib"
     location    = "Cairo, Egypt"
-    role        = "Software Engineer & Cybersecurity Enthusiast"
+    role        = "Software Engineer & Backend Engineer"
     current     = "Building secure, scalable web systems"
     hobbies     = [
         "System Design",
-        "CTF Challenges",
         "Open Source Contributing",
         "Reading tech blogs at midnight",
         "Chasing that one bug at 3 AM..."
